@@ -1,7 +1,7 @@
 #include <stdio.h>
 void bSort(int arr[], int size)
 {
-	int i, j;
+	int i,j;
 	for(i = 0; i <= size-2; i++)
 	{
 		int flag = 0;
