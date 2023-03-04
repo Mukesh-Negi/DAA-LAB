@@ -1,5 +1,5 @@
 #include <stdio.h>
-void selSort( int *arr, int size)
+void insSort( int *arr, int size)
 {
 	int i;
 	for( i = 1; i < size; i++)
@@ -42,7 +42,7 @@ int main()
 	}
 	printArray(arr, n);
 	printf("              PERFORMING INSERTION SORT :\n");
-	selSort(arr, n);
+	insSort(arr, n);
 	printArray(arr, n);
 	return 0;
 }
