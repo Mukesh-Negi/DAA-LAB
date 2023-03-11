@@ -41,7 +41,7 @@ int main()
 		scanf("%d", &arr[i]);
 	}
 	printArray(arr, n);
-	printf("              PERFORMING INSERTION SORT :\n");
+	printf("               PERFORMING INSERTION SORT :\n");
 	insSort(arr, n);
 	printArray(arr, n);
 	return 0;
