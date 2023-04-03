@@ -1,4 +1,5 @@
 #include <stdio.h>
+// using insertion sort for sorting
 void insSort(int arr[], int size)
 {
     int i, j;
@@ -34,7 +35,7 @@ void findDupl(int arr[], int N)
     {
         if (arr[i] == arr[i + 1])
         {
-            printf("DUPLICATES ARE PRESENT\n");
+            printf("DUPLICATES ARE PRESENT \n");
             return;
         }
     }
