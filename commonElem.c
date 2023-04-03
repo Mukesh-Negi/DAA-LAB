@@ -1,8 +1,7 @@
 #include <stdio.h>
 void insSort( int *arr, int size)
 {
-	int i;
-	for( i = 1; i < size; i++)
+	for( int  i = 1; i < size; i++)
 	{
 		int key = arr[i];
 		int j = i-1;
