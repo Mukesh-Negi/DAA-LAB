@@ -1,11 +1,17 @@
 #include <stdio.h>
 int lSearch( int arr[], int size, int key)
 {
-	int i = 0;
-	for( i = 0; i < size; i++)
+	int count = 0;
+	for(int i = 0; i < size; i++)
 	{
-		if( arr[i] == key) return i;
+		count++;
+		if( arr[i] == key)
+		{
+			printf(" No. of Comparisons :-> %d \n", count);
+			return i;
+		} 
 	}
+	printf(" No. of Comparisons :-> %d \n", count);
 	return -1;
 }
 int main()
@@ -32,5 +38,5 @@ int main()
 	{
 		printf("ELEMENT IS PRESENT AT INDEX %d \n",res);
 	}
-	return 0;	
+	return 0;
 }
