@@ -2,11 +2,14 @@
 void selSort(int arr[], int size)
 {
 	int i , j;
+	int comp = 0;
+	int swap = 0;
 	for( i = 0; i <= size-2; i++)
 	{
 		int minIdx = i;
 		for( j = i+1; j <= size-1; j++)
 		{
+			comp++;
 			if( arr[j] < arr[minIdx])
 			{
 				minIdx = j;
@@ -15,7 +18,10 @@ void selSort(int arr[], int size)
  			int temp = arr[i];
 			arr[i] = arr[minIdx];
 			arr[minIdx] = temp;
+			swap++;
 	}
+	printf("NUMBER OF COMPARISONS : %d\n", comp);
+	printf("NUMBER OF SWAPS : %d\n", swap);
 }
 void printArray(int arr[], int size)
 {
