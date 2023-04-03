@@ -1,15 +1,22 @@
 #include <stdio.h>
 int binSearch( int arr[], int size, int key)
 {
+	int count = 0;
 	int s = 0;
 	int e = size-1;
 	while ( s <= e)
 	{
+		count++;
 		int mid = s+(e-s)/2;
-		if ( arr[mid] == key) return mid;
+		if ( arr[mid] == key)
+		{
+			printf(" No. of Comparisons :-> %d \n", count);
+			return mid;
+		} 
 		else if( key > arr[mid]) s = mid+1;
 		else e = mid-1;
 	}
+	printf(" No. of Comparisons :-> %d \n", count);
 	return -1;
 }
 int main()
