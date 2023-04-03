@@ -1,5 +1,5 @@
 #include <stdio.h>
-void merge(int arr[], int l , int m, int r)
+void merge(int arr[], int l , int m, int r, int *comp)
 {
     int i, j, k;
     int n1 = m-l+1;
@@ -30,6 +30,7 @@ void merge(int arr[], int l , int m, int r)
             j++;
         }
         k++;
+        (*comp)++;
     }
     while( i < n1)
     {
@@ -42,16 +43,16 @@ void merge(int arr[], int l , int m, int r)
         arr[k] = R[j];
         j++;
         k++;
-    }
+    };
 }
-void mergeSort( int arr[], int l, int r)
+void mergeSort( int arr[], int l, int r, int *comp)
 {
     if( l < r)
     {
         int m = l+(r-l)/2;
-        mergeSort(arr, l, m);
-        mergeSort(arr, m+1, r);
-        merge(arr, l, m ,r);
+        mergeSort(arr, l, m, comp);
+        mergeSort(arr, m+1, r, comp);
+        merge(arr, l, m ,r, comp);
     }
 }
 void printArray(int arr[], int N)
@@ -64,9 +65,11 @@ void printArray(int arr[], int N)
 }
 int main()
 {
-    int arr[] = { 5, 4, 3, 2, 1};
-    int N = 5;
-    mergeSort(arr, 0, N-1);
-    printArray(arr, 5);
+    int arr[] = {54, 65, 34, 76, 78, 97, 46, 32, 51, 21};
+    int N = 10;
+    int comp = 0;
+    mergeSort(arr, 0, N-1, &comp);
+    printArray(arr, N);
+    printf("COMPARISONS REQUIRED : %d\n", comp);
     return 0;
 }
