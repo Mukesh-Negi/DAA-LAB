@@ -1,22 +1,29 @@
 #include <stdio.h>
 void insSort( int *arr, int size)
 {
-	int i;
-	for( i = 1; i < size; i++)
+	int comp = 0;
+	int shift = 0;
+	for(int i = 1; i < size; i++)
 	{
 		int key = arr[i];
 		int j = i-1;
 		while( j >= 0 )
 		{
+			
 			if( arr[j] > key)
 			{
+				comp++;
+				shift++;
 				arr[j+1] = arr[j];
 				j--;
 			}
 			else break;
 		}
 		arr[j+1] = key;
-        }
+		shift++;
+    }
+	printf("No. of comparisons : %d\n",comp);
+	printf("No. of Shifts : %d\n", shift);
 }
 void printArray(int arr[], int size)
 {
