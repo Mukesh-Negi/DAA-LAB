@@ -36,7 +36,7 @@ void maxFrequency(char str[])
 }
 int main()
 {
-    char arr[] = "gtllwawglcwdsaavcl";
+    char arr[] = "aedwadqafp";
     maxFrequency(arr);
     return 0;
 }
