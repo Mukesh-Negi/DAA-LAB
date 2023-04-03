@@ -38,7 +38,7 @@ void twoSum ( int arr[], int n, int key)
             i++;
         }
     }
-    printf(" No such Element Exists \n");
+    printf("No such Element Exists \n");
 }
 int main()
 {
